@@ -13,5 +13,8 @@
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primevue": "^3.23.0"
+  },
+  "dependencies": {
+    "minireset.css": "^0.0.7"
   }
 }

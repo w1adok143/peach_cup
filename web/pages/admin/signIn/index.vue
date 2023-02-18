@@ -1,6 +1,6 @@
 <template>
   <div class="sign-in">
-    <div class="sign-in__container flex justify-content-center">
+    <div class="sign-in__container flex justify-content-center align-items-center h-screen">
       <div class="sign-in__body w-2">
         <!-- title -->
         <div class="sign-in__title text-center">Авторизація</div>
