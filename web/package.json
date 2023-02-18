@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "nuxt": "^3.2.2",
+    "postcss-nested": "^6.0.0",
+    "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primevue": "^3.23.0"
   }
