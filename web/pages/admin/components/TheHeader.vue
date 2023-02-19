@@ -4,9 +4,8 @@
       <div class="header__navbar">
         <Menubar :model="items">
           <template #start>
-            <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" height="40" class="mr-2">
+            <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" height="30px" width="30px" class="mr-2">
           </template>
-
           <template #end>
             <InputText placeholder="Search" type="text" />
           </template>

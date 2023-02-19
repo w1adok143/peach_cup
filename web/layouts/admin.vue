@@ -1,12 +1,9 @@
 <template>
-  <div class="wrapper">
-    <!-- header -->
+  <div class="admin">
     <TheHeader/>
-    <!-- main -->
-    <main>
+    <div class="main">
       <slot />
-    </main>
-    <!-- footer -->
+    </div>
     <TheFooter/>
   </div>
 </template>
