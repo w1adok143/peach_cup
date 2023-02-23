@@ -58,7 +58,7 @@
 </script>
 
 
-<style scoped lang="scss">
+<style scoped lang="postcss">
 .p-button {
     margin: 0.3rem .5rem;
     min-width: 10rem;
