@@ -3,8 +3,8 @@
     <div class="menu-items__container container">
       <div class="menu-items__body">
         <div class="items__button">
-          <Button label="Додати товар" icon="pi pi-external-link" @click="openModal"/>
-          <Dialog header="Додати товар" v-model:visible="displayModal" :breakpoints="{'960px': '75vw', '640px': '90vw'}" :style="{width: '50vw'}" :modal="true">
+          <Button label="Додати категорію" icon="pi pi-external-link" @click="openModal"/>
+          <Dialog header="Додати категорію" v-model:visible="displayModal" :breakpoints="{'960px': '75vw', '640px': '90vw'}" :style="{width: '50vw'}" :modal="true">
             <form class="menu-items-form">
               <div class="form__field field mb-3">
                 <label for="add" class="field__label">Назва товару</label>
@@ -14,17 +14,9 @@
                 <label for="add" class="field__label">Категорія</label>
                 <Dropdown id="Категорія" type="text" class="w-full" v-model="selectedCategories" :options="categories" optionLabel="name" autocomplete="off" placeholder="Категорія" />
               </div>
-              <div class="form__field field mb-3">
-                <label for="add" class="field__label">Собівартість</label>
-                <InputText  id="Собівартість" type="text" class="w-full" placeholder="Собівартість" autocomplete="off"/>
-              </div>
-              <div class="form__field field mb-3">
-                <label for="add" class="field__label">Націнка %</label>
-                <InputText  id="Націнка %" type="text" class="w-full" placeholder="Націнка %" autocomplete="off"/>
-              </div>
-              <div class="form__field field mb-3">
-                <label for="add" class="field__label">Ціна</label>
-                <InputText  id="Ціна" type="text" class="w-full" placeholder="Ціна" autocomplete="off"/>
+              <div class="menu-categories__dropdown mb-3">
+                <label for="add" class="field__label">Налог</label>
+                <Dropdown id="Налог" type="text" class="w-full" v-model="selectedTax" :options="tax" optionLabel="name" autocomplete="off" placeholder="Налог" />
               </div>
             </form>
             <template #footer>
@@ -55,7 +47,16 @@
     {name: 'Categories3'},
     {name: 'Categories4'},
     {name: 'Categories5'}
-  ] as Array<{name: string, code: string}>;
+  ] as Array<{name: string}>;
+
+  const selectedTax = ref(null);
+  const tax = [
+    {name: 'Tax1'},
+    {name: 'Tax2'},
+    {name: 'Tax3'},
+    {name: 'Tax4'},
+    {name: 'Tax5'}
+  ] as Array<{name: string}>;
 
   const displayModal = ref(false);
 
