@@ -33,6 +33,9 @@
             </template>
         </Dialog>
         </div>
+        <div class="menu-items__content">
+          <Table :columns="table1.columns" :dialog="MenuItemsForm"></Table>
+        </div>
       </div>
     </div>
   </div>
@@ -43,10 +46,23 @@
   import Dialog from 'primevue/dialog';
   import InputText from 'primevue/inputtext';
   import Dropdown from 'primevue/dropdown';
+  import Table from "~/pages/admin/components/Table.vue";
+  import MenuItemsForm from "~/pages/admin/menu/items/components/MenuItemsForm.vue";
 
   definePageMeta({
     layout: 'admin'
   });
+
+  const table1 = {
+    columns: [
+      { field: 'id', label: 'Ід', sortable: true },
+      { field: 'label', label: 'Назва', sortable: true },
+      { field: 'category', label: 'Категорія', sortable: true },
+      { field: 'price', label: 'Ціна', sortable: true },
+      { field: 'price_down', label: 'Собівартість', sortable: true },
+      { field: 'price_up', label: 'Націнка', sortable: true }
+    ]
+  }
 
   const selectedCategories = ref(null);
   const categories = [
